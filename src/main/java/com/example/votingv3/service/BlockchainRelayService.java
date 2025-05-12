@@ -8,7 +8,7 @@ import java.util.Map;
 @Service
 public class BlockchainRelayService {
 
-    private final WebClient webClient = WebClient.create("http://<로컬서버IP>:3001");
+    private final WebClient webClient = WebClient.create("https://votingv3-production-2241.up.railway.app");
 
     public String sendToLocalServer(Long voteId, int itemIndex, String userAddress) {
         Map<String, Object> requestBody = Map.of(
