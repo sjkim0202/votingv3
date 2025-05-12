@@ -249,12 +249,18 @@ document.addEventListener("DOMContentLoaded", () => {
         userInfoDiv.textContent = username;
     }
 
-    if (accessToken && role) {
-        loadVotes(role, accessToken);
-    } else {
+    if (!accessToken || !role) {
         alert("로그인이 필요합니다.");
         window.location.href = "index.html";
+        return;
     }
+
+    // ✅ 사용자 권한 확인 후 관리자 전용 버튼 보여주기
+    if (role === "ADMIN" || role === "DEVELOP") {
+        document.querySelectorAll(".admin-only").forEach(el => el.style.display = "inline-block");
+    }
+
+    loadVotes();
 
 });
 
