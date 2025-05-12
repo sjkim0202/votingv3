@@ -15,7 +15,7 @@ function loadVotes() {
     const loading = document.getElementById("loading");
     if (loading) loading.style.display = "block";
 
-    fetch("http://localhost:8080/api/votes", {
+    fetch("https://localhost:8080/api/votes", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + accessToken
@@ -65,9 +65,19 @@ function loadVotes() {
             }
 
             // ✅ 모든 렌더링 후 버튼 표시
-            document.querySelectorAll(".vote-card .actions, .action-btn, .create-btn, .trash-btn").forEach(btn => {
+            document.querySelectorAll(".vote-card .actions, .action-btn").forEach(btn => {
                 btn.style.display = "inline-block";
             });
+
+            if (role === "ADMIN" || role === "DEVELOP") {
+                document.querySelectorAll(".create-btn, .trash-btn").forEach(btn => {
+                    btn.style.display = "inline-block";
+                });
+            } else {
+                document.querySelectorAll(".create-btn, .trash-btn").forEach(btn => {
+                    btn.style.display = "none";
+                });
+            }
 
             if (loading) loading.style.display = "none";
         })
