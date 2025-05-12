@@ -65,7 +65,7 @@ function loadVotes() {
             }
 
             // ✅ 모든 렌더링 후 버튼 표시
-            document.querySelectorAll(".vote-card .actions, .action-btn").forEach(btn => {
+            document.querySelectorAll(".vote-card .actions, .action-btn, .create-btn, .trash-btn").forEach(btn => {
                 btn.style.display = "inline-block";
             });
 
