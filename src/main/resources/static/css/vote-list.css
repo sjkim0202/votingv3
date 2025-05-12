@@ -191,6 +191,7 @@ button:hover {
 }
 
 .action-btn {
+    display: none;
     padding: 6px 10px;
     font-size: 13px;
     font-weight: 500;
