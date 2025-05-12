@@ -16,7 +16,7 @@ let lastSelectedRadio = null; // ✅ 이전 선택 추적
 if (!voteId) {
     alert("잘못된 접근입니다. (투표 ID 없음)");
 } else {
-    fetch(`http://localhost:8080/api/votes/${voteId}`, {
+    fetch(`https://votingv3-production-2241.up.railway.app/api/votes/${voteId}`, {
         headers: { Authorization: `Bearer ${token}` }
     })
         .then(res => {
@@ -108,7 +108,7 @@ document.getElementById("vote-form").addEventListener("submit", async e => {
     if (!confirmed) return;
 
     try {
-        const res = await fetch(`http://localhost:8080/api/votes/${voteId}/vote`, {
+        const res = await fetch(`https://votingv3-production-2241.up.railway.app/api/votes/${voteId}/vote`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
