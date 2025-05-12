@@ -1,0 +1,114 @@
+
+body {
+    user-select: none;
+    font-family: "Noto Sans KR", sans-serif;
+    background: linear-gradient(to right, #b0c7e6, #d8e1f3);
+    padding: 40px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+.container:hover {
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #111;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #e7ecff;
+    font-weight: 600;
+    padding: 14px;
+    font-size: 15px;
+    color: #2d2f45;
+    border: 1px solid #d1d5e9;
+    text-align: center;
+}
+
+td {
+    height: 64px;
+    padding: 12px;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    background-color: #fdfdff;
+    border: 1px solid #e0e4ef;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #eef3ff;
+}
+
+
+.action-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.action-btn:hover {
+    transform: scale(1.03);
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+.delete-btn:hover {
+    background-color: #cc2f2f;
+}
+
+.restore-btn {
+    background-color: cornflowerblue;
+    color: white;
+}
+.restore-btn:hover {
+    background-color: dodgerblue;
+}
+
+.back-btn {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+.back-btn:hover {
+    background-color: dodgerblue;
+    transform: scale(1.02);
+}
