@@ -190,6 +190,10 @@ button:hover {
     background-color: orangered;
 }
 
+.admin-only {
+    display: none;
+}
+
 .action-btn {
     padding: 6px 10px;
     font-size: 13px;
