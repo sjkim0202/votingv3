@@ -171,7 +171,6 @@ button:hover {
     margin-top: 20px;
 }
 .create-btn, .trash-btn {
-    display: none;
     background-color: cornflowerblue;
     color: white;
     font-size: 16px;
@@ -192,7 +191,6 @@ button:hover {
 }
 
 .action-btn {
-    display: none;
     padding: 6px 10px;
     font-size: 13px;
     font-weight: 500;
